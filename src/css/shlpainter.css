@@ -1,0 +1,17 @@
+.dispaly-object{
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform-origin: center;
+	mask-repeat: no-repeat;
+	overflow: hidden;
+}
+.image-object{
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform-origin: center;
+	width: auto;
+	height: auto;
+	mask-repeat: no-repeat;
+}

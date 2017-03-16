@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>shlpainter</title>
+</head>
+<style type="text/css">
+	body{
+		text-align: center;
+	}
+</style>
+<body>
+
+<div id="stage"></div>
+<script type="text/javascript" src="dist/js/shlpainter.bundle.js"></script>
+<script type="text/javascript">
+(function(){
+	var stage=new shlpainter.Stage(document.getElementById("stage"),800,600);
+	stage.divObject.style.display="inline-block";
+	stage.backgroundColor="#ccc";
+
+	var image=new shlpainter.ImageObject("test.jpg");
+	image.x=350;
+	image.y=250;
+	stage.addChild(image);
+
+	var opacityImage=new shlpainter.ImageObject("test.jpg");
+	opacityImage.opacity=0.5;
+	opacityImage.x=100;
+	opacityImage.y=100;
+	stage.addChild(opacityImage);
+
+	var scaleImage=new shlpainter.ImageObject("test.jpg");
+	scaleImage.scaleX=1.5;
+	scaleImage.x=600;
+	scaleImage.y=250;
+	stage.addChild(scaleImage);
+
+	var rotationImage=new shlpainter.ImageObject("test.jpg");
+	rotationImage.rotation=45;
+	rotationImage.x=100;
+	rotationImage.y=400;
+	stage.addChild(rotationImage);
+})();
+</script>
+</body>
+</html>
